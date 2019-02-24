@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Circle</title>
+<style>
+html, body { height: 100%; margin: 0; border:0; }
+#container { box-sizing: border-box; position: relative; margin: auto; width:1500px; height:1500px;}
+.field, .other, .more, .thing, .here, .almost, .too { width: 60px; height: 20px; position: absolute; color: #000; background-color:#e1e1e1; font-size:14px;}
+</style>
+</head>
+<body>
+<div id="container"></div>
+<div id="second"></div>
+ <a id="ones" href="https://www.welcome.com">Welcome!</a> 
+</body>
+<script type="text/javascript">
+var node = document.getElementById("ones");
+var container = document.getElementById("container");
+var size = window.innerWidth > window.innerHeight ? window.innerHeight : window.innerWidth;
+
+var last = node.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__;
+var list = Object.getOwnPropertyNames(last);
+console.log(list);
+
+function createFields() {
+    for (var i = 0; i < list.length; i++) {
+        var div = document.createElement('div');
+        div.className = "field";
+        div.innerHTML = list[i];
+        container.appendChild(div);
+    }
+}
+
+function distributeFields() {
+    var myNodeList = document.querySelectorAll(".field");
+    var fields = myNodeList;
+    var width = 750;
+    var height = 750;
+    var angle = 0;
+    var step = 2 * Math.PI / fields.length;
+    var radius = 0.9 * width;
+
+    var angle = -90 * Math.PI / 180;
+
+    fields.forEach(function (element, index) {
+        var x = Math.round(width + radius * Math.cos(angle));
+        var y = Math.round(height + radius * Math.sin(angle));
+        element.style.right = x + 'px';
+        element.style.top = y + 'px';
+        
+        var rotationBase = 0;
+        var rotation = rotationBase + 360 / fields.length * index;
+        element.style.transform = 'rotate(' + rotation + 'deg)';
+        
+        angle = angle - step;
+    });
+}
+
+
+createFields();
+distributeFields();
+
+
+
+
+
+var last2 = node.__proto__.__proto__.__proto__.__proto__.__proto__;
+var list2 = Object.getOwnPropertyNames(last2);
+console.log(list2);
+
+function createFields2() {
+    for (var i2 = 0; i2 < list2.length; i2++) {
+        var div = document.createElement('div');
+        div.className = "other";
+        div.innerHTML = list2[i2];
+        container.appendChild(div);
+    }
+}
+
+function distributeFields2() {
+    var myNodeList = document.querySelectorAll(".other");
+    var fields = myNodeList;
+    var width = 750;
+    var height = 750;
+    var angle = 0;
+    var step = 2 * Math.PI / fields.length;
+    var radius = 0.8 * width;
+
+    var angle = -90 * Math.PI / 180;
+
+    fields.forEach(function (element, index) {
+        var x = Math.round(width + radius * Math.cos(angle));
+        var y = Math.round(height + radius * Math.sin(angle));
+        element.style.right = x + 'px';
+        element.style.top = y + 'px';
+        
+        var rotationBase = 0;
+        var rotation = rotationBase + 360 / fields.length * index;
+        element.style.transform = 'rotate(' + rotation + 'deg)';
+        
+        angle = angle - step;
+    });
+}
+
+createFields2();
+distributeFields2();
+
+
+
+var last3 = node.__proto__.__proto__.__proto__.__proto__;
+var list3 = Object.getOwnPropertyNames(last3);
+console.log(list3);
+
+function createFields3() {
+    for (var i = 0; i < list3.length; i++) {
+        var div = document.createElement('div');
+        div.className = "more";
+        div.innerHTML = list3[i];
+        container.appendChild(div);
+    }
+}
+
+function distributeFields3() {
+    var myNodeList = document.querySelectorAll(".more");
+    var fields = myNodeList;
+    var width = 750;
+    var height = 750;
+    var angle = 0;
+    var step = 2 * Math.PI / fields.length;
+    var radius = 0.7 * width;
+
+    var angle = -90 * Math.PI / 180;
+
+    fields.forEach(function (element, index) {
+        var x = Math.round(width + radius * Math.cos(angle));
+        var y = Math.round(height + radius * Math.sin(angle));
+        element.style.right = x + 'px';
+        element.style.top = y + 'px';
+        
+        var rotationBase = -90;
+        var rotation = rotationBase + 360 / fields.length * index;
+        element.style.transform = 'rotate(' + rotation + 'deg)';
+        
+        angle = angle - step;
+    });
+}
+
+createFields3();
+distributeFields3();
+
+
+
+var last4 = node.__proto__.__proto__.__proto__;
+var list4 = Object.getOwnPropertyNames(last4);
+console.log(list4);
+
+function createFields4() {
+    for (var i = 0; i < list4.length; i++) {
+        var div = document.createElement('div');
+        div.className = "thing";
+        div.innerHTML = list4[i];
+        container.appendChild(div);
+    }
+}
+
+function distributeFields4() {
+    var myNodeList = document.querySelectorAll(".thing");
+    var fields = myNodeList;
+    var width = 750;
+    var height = 750;
+    var angle = 0;
+    var step = 2 * Math.PI / fields.length;
+    var radius = 0.55 * width;
+
+    var angle = -90 * Math.PI / 180;
+
+    fields.forEach(function (element, index) {
+        var x = Math.round(width + radius * Math.cos(angle));
+        var y = Math.round(height + radius * Math.sin(angle));
+        element.style.right = x + 'px';
+        element.style.top = y + 'px';
+        
+        var rotationBase = -90;
+        var rotation = rotationBase + 360 / fields.length * index;
+        element.style.transform = 'rotate(' + rotation + 'deg)';
+        
+        angle = angle - step;
+    });
+}
+
+createFields4();
+distributeFields4();
+
+
+
+
+
+
+
+
+
+
+var last5 = node.__proto__.__proto__;
+var list5 = Object.getOwnPropertyNames(last5);
+console.log(list5);
+
+function createFields5() {
+    for (var i = 0; i < list5.length; i++) {
+        var div = document.createElement('div');
+        div.className = "here";
+        div.innerHTML = list5[i];
+        container.appendChild(div);
+    }
+}
+
+function distributeFields5() {
+    var myNodeList = document.querySelectorAll(".here");
+    var fields = myNodeList;
+    var width = 750;
+    var height = 750;
+    var angle = 0;
+    var step = 2 * Math.PI / fields.length;
+    var radius = 0.4 * width;
+
+    var angle = -90 * Math.PI / 180;
+
+    fields.forEach(function (element, index) {
+        var x = Math.round(width + radius * Math.cos(angle));
+        var y = Math.round(height + radius * Math.sin(angle));
+        element.style.right = x + 'px';
+        element.style.top = y + 'px';
+        
+        var rotationBase = -45;
+        var rotation = rotationBase + 360 / fields.length * index;
+        element.style.transform = 'rotate(' + rotation + 'deg)';
+        
+        angle = angle - step;
+    });
+}
+
+createFields5();
+distributeFields5();
+
+
+
+var last6 = node.__proto__;
+var list6 = Object.getOwnPropertyNames(last6);
+console.log(list6);
+
+function createFields6() {
+    for (var i = 0; i < list6.length; i++) {
+        var div = document.createElement('div');
+        div.className = "almost";
+        div.innerHTML = list6[i];
+        container.appendChild(div);
+    }
+}
+
+function distributeFields6() {
+    var myNodeList = document.querySelectorAll(".almost");
+    var fields = myNodeList;
+    var width = 750;
+    var height = 750;
+    var angle = 0;
+    var step = 2 * Math.PI / fields.length;
+    var radius = 0.25 * width;
+
+    var angle = -90 * Math.PI / 180;
+
+    fields.forEach(function (element, index) {
+        var x = Math.round(width + radius * Math.cos(angle));
+        var y = Math.round(height + radius * Math.sin(angle));
+        element.style.right = x + 'px';
+        element.style.top = y + 'px';
+        
+        var rotationBase = -45;
+        var rotation = rotationBase + 360 / fields.length * index;
+        element.style.transform = 'rotate(' + rotation + 'deg)';
+        
+        angle = angle - step;
+    });
+}
+
+createFields6();
+distributeFields6();
+
+
+
+
+
+var last7 = node;
+var list7 = Object.getOwnPropertyNames(last7);
+console.log(list7);
+
+function createFields7() {
+    for (var i = 0; i < list7.length; i++) {
+        var div = document.createElement('div');
+        div.className = "too";
+        div.innerHTML = list7[i];
+        container.appendChild(div);
+    }
+}
+
+function distributeFields7() {
+    var myNodeList = document.querySelectorAll(".too");
+    var fields = myNodeList;
+    var width = 750;
+    var height = 750;
+    var angle = 0;
+    var step = 2 * Math.PI / fields.length;
+    var radius = 0.10 * width;
+
+    var angle = -90 * Math.PI / 180;
+
+    fields.forEach(function (element, index) {
+        var x = Math.round(width + radius * Math.cos(angle));
+        var y = Math.round(height + radius * Math.sin(angle));
+        element.style.right = x + 'px';
+        element.style.top = y + 'px';
+        
+        var rotationBase = -90;
+        var rotation = rotationBase + 360 / fields.length * index;
+        element.style.transform = 'rotate(' + rotation + 'deg)';
+        
+        angle = angle - step;
+    });
+}
+
+createFields7();
+distributeFields7();
+
+
+
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM nodes</title>
+  </head>
+  <body>
+    <div id="first"></div>
+	<canvas></canvas>
+	<video></video>
+	<style></style>
+	<span></span>
+  </body>
+  <script>
+	var info = document.getElementById("first");
+	
+	document.querySelectorAll('*').forEach(function(node){
+		info.innerHTML = info.innerHTML + "<b>" + node.nodeName + "</b>" + "<br/>";
+		logAllPrototypes(node);
+		info.innerHTML = info.innerHTML + "<br/>";
+	});
+	
+	function logAllPrototypes(obj) {
+	 if (obj == null) return; // recursive approach
+	 info.innerHTML = info.innerHTML + "<b>" + obj + "</b>" + " ";
+	 logAllPrototypes(Object.getPrototypeOf(obj));
+	}
+	
+	</script>
+</html>
